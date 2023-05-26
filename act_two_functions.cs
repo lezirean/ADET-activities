@@ -169,5 +169,40 @@
                 Console.WriteLine();
             }
         }
+
+        public static void drawZero(int number) {
+            for(int i = 1; i <= number; i++) {
+                
+                if(i == 1 || i == number) {
+                    for(int j = 1; j <= number; j++) {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                    continue;
+                }
+
+                Console.Write("*");
+                    
+                for(int s = 1; s <= number - 2; s++) {
+                    Console.Write("_");
+                }
+
+                Console.Write("*");
+
+                Console.WriteLine();
+            }
+        }
+
+        public static void drawBowTie(int number) {
+            for(int i = -number/2; i <= number/2; i++) {
+                for(int j = -number/2; j <= number/2; j++) {
+                    if(i * i <= j * j)
+                        Console.Write("*");
+                    else
+                        Console.Write("_");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
