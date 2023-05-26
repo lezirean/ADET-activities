@@ -101,6 +101,32 @@ namespace ADET_activities {
                             }
                         } while(!validateArg(arg));
                         break;
+                    case 6:
+                        do {
+                            Console.WriteLine("Enter the total number of rows for your HOURGLASS FIGURE (odd and must be greater than 3)");
+                            arg = Convert.ToInt32(Console.ReadLine());
+
+                            if(validateArg(arg)) {
+                                act_two_functions.drawHourglass(arg);
+                            }
+                            else {
+                                Console.WriteLine("Invalid input.");
+                            }
+                        } while(!validateArg(arg));
+                        break;
+                    case 7:
+                        do {
+                            Console.WriteLine("Enter the total number of rows for your DIAMOND FIGURE (odd and must be greater than 3)");
+                            arg = Convert.ToInt32(Console.ReadLine());
+
+                            if(validateArg(arg)) {
+                                act_two_functions.drawDiamond(arg);
+                            }
+                            else {
+                                Console.WriteLine("Invalid input.");
+                            }
+                        } while(!validateArg(arg));
+                        break;
                     case 13:
                         Console.WriteLine("Program Terminated.");
                         break;

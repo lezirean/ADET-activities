@@ -50,7 +50,7 @@
             int space = number / 2;
 
             for (int r = 1; r <= (number / 2) + 1; r++) {
-                for (int sp = 1; sp <= space; sp++) { // number - r
+                for (int sp = 1; sp <= space; sp++) { 
                     Console.Write("_");
                 }
 
@@ -58,7 +58,7 @@
                     Console.Write("*");
                 }
 
-                for (int sp = 1; sp <= space; sp++) { // number - r
+                for (int sp = 1; sp <= space; sp++) { 
                     Console.Write("_");
                 }
 
@@ -80,6 +80,88 @@
                 }
 
                 for(int sp = 1; sp <= space; sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                space++;
+                Console.WriteLine();
+            }
+        }
+
+        public static void drawHourglass(int number) {
+            
+            // Upper half of hourglass
+            int space = 0;
+            for(int r = (number / 2) + 1;r >= 1;r--) {
+                for(int sp = 1;sp <= space;sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                for(int c = 1;c <= (r * 2) - 1;c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1;sp <= space;sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                space++;
+                Console.WriteLine();
+            }
+
+            // lower half of hourglass
+            space = number / 2 - 1;
+            for(int r = 2; r <= (number / 2) + 1; r++) {
+                for(int sp = 1; sp <= space; sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                for(int c = 1; c <= (r * 2) - 1; c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1; sp <= space; sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                space--;
+                Console.WriteLine();
+            }
+        }
+
+        public static void drawDiamond(int number) {
+            
+            // upper half of diamond
+            int space = number / 2;
+            for(int r = 1; r <= (number / 2) + 1; r++) {
+                for(int sp = 1; sp <= space; sp++) {
+                    Console.Write("_");
+                }
+
+                for(int c = 1; c <= (r * 2) - 1; c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1; sp <= space; sp++) {
+                    Console.Write("_");
+                }
+
+                space--;
+                Console.WriteLine();
+            }
+
+            // lower half of diamond
+            space = 1;
+            for(int r = (number / 2); r >= 1; r--) {
+                for(int sp = 1; sp <= space; sp++) {
+                    Console.Write("_");
+                }
+
+                for(int c = 1; c <= (r * 2) - 1; c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1; sp <= space; sp++) {
                     Console.Write("_");
                 }
 
