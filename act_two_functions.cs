@@ -68,7 +68,24 @@
         }
 
         public static void drawReversedIsoscelesTriangle(int number) {
+            int space = 0;
 
+            for(int r = (number / 2) + 1; r >= 1; r--) {
+                for(int sp = 1; sp <= space; sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                for(int c = 1; c <= (r * 2) - 1; c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1; sp <= space; sp++) { // number - r
+                    Console.Write("_");
+                }
+
+                space++;
+                Console.WriteLine();
+            }
         }
     }
 }
