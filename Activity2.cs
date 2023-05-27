@@ -140,6 +140,32 @@ namespace ADET_activities {
                             }
                         } while(!validateArg(arg));
                         break;
+                    case 9:
+                        do {
+                            Console.WriteLine("Enter the total number of rows for your ARROW UP FIGURE (odd and must be greater than 3)");
+                            arg = Convert.ToInt32(Console.ReadLine());
+
+                            if(validateArg(arg)) {
+                                act_two_functions.drawArrowUp(arg);
+                            }
+                            else {
+                                Console.WriteLine("Invalid input.");
+                            }
+                        } while(!validateArg(arg));
+                        break;
+                    case 11:
+                        do {
+                            Console.WriteLine("Enter the total number of rows for your X FIGURE (odd and must be greater than 3)");
+                            arg = Convert.ToInt32(Console.ReadLine());
+
+                            if(validateArg(arg)) {
+                                act_two_functions.drawX(arg);
+                            }
+                            else {
+                                Console.WriteLine("Invalid input.");
+                            }
+                        } while(!validateArg(arg));
+                        break;
                     case 12:
                         do {
                             Console.WriteLine("Enter the total number of rows for your BOWTIE FIGURE (odd and must be greater than 3)");

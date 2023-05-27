@@ -193,6 +193,56 @@
             }
         }
 
+        public static void drawArrowUp(int number) {
+            int space = number / 2;
+            int baseWidth = number / 2;
+ 
+            for(int r = 1; r <= (number / 2) + 1; r++) {
+                for(int sp = 1; sp <= space; sp++) {
+                    Console.Write("_");
+                }
+
+                for(int c = 1; c <= (r * 2) - 1; c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1; sp <= space; sp++) {
+                    Console.Write("_");
+                }
+
+                space--;
+                Console.WriteLine();
+            }
+
+            for(int printBase = 1; printBase <= baseWidth; printBase++) {
+                for(int baseSpace = 1; baseSpace <= baseWidth - 1; baseSpace++) {
+                    Console.Write("_");
+                }
+
+                for(int baseAsterisk = 1; baseAsterisk <= 3; baseAsterisk++) {
+                    Console.Write("*");
+                }
+
+                for(int baseSpace = 1; baseSpace <= baseWidth - 1; baseSpace++) {
+                    Console.Write("_");
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        public static void drawX(int number) {
+            for(int row = 1; row <= number; row++) {
+                for(int col = 1; col <= number; col++) {
+                    if(row == col || col == (number - row + 1))
+                        Console.Write("*");
+                    else
+                        Console.Write("_");
+                }
+                Console.WriteLine();
+            }
+        }
+
         public static void drawBowTie(int number) {
             for(int i = -number/2; i <= number/2; i++) {
                 for(int j = -number/2; j <= number/2; j++) {
