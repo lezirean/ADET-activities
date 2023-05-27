@@ -32,10 +32,13 @@ namespace ADET_activities {
                 Console.WriteLine("11 - X");
                 Console.WriteLine("12 - Bow Tie");
                 Console.WriteLine("13 - << EXIT PROGRAM >>");
+                Console.Write("Enter your choice: ");
 
-                choice = Convert.ToInt32(Console.ReadLine());
+                while(!int.TryParse(Console.ReadLine(), out choice)) {
+                    Console.Write("Please only input numbers (1-12): ");
+                }
 
-                switch (choice) {
+                switch(choice) {
                     case 1:                   
                         do {
                             Console.WriteLine("Enter the total number of lines for your PARALLELOGRAM (odd and must be greater than 3)");
@@ -199,7 +202,7 @@ namespace ADET_activities {
                         Console.WriteLine("Invalid input. Please try again.");
                         break;
                 }
-            } while(choice >= 1 && choice <= 12);
+            } while(choice >= 1 && choice <= 12 || choice != 13);
         }
     }
 }
