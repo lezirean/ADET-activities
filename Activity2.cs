@@ -155,7 +155,7 @@ namespace ADET_activities {
                         break;
                     case 10:
                         do {
-                            Console.WriteLine("Enter the total number of rows for your ARROW UP FIGURE (odd and must be greater than 3)");
+                            Console.WriteLine("Enter the total number of rows for your ARROW DOWN FIGURE (odd and must be greater than 3)");
                             arg = Convert.ToInt32(Console.ReadLine());
 
                             if(validateArg(arg)) {
