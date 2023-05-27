@@ -231,6 +231,45 @@
             }
         }
 
+        public static void drawArrowDown(int number) {
+            int baseWidth = number / 2;
+            for(int printBase = 1; printBase <= baseWidth; printBase++) {
+                for(int baseSpace = 1; baseSpace <= baseWidth - 1; baseSpace++) {
+                    Console.Write("_");
+                }
+
+                for(int baseAsterisk = 1; baseAsterisk <= 3; baseAsterisk++) {
+                    Console.Write("*");
+                }
+
+                for(int baseSpace = 1; baseSpace <= baseWidth - 1; baseSpace++) {
+                    Console.Write("_");
+                }
+
+                Console.WriteLine();
+            }
+
+            // arrow head
+            int space = 0;
+
+            for(int r = (number / 2) + 1; r >= 1; r--) {
+                for(int sp = 1; sp <= space; sp++) { 
+                    Console.Write("_");
+                }
+
+                for(int c = 1; c <= (r * 2) - 1; c++) {
+                    Console.Write("*");
+                }
+
+                for(int sp = 1; sp <= space; sp++) { 
+                    Console.Write("_");
+                }
+
+                space++;
+                Console.WriteLine();
+            }
+        }
+
         public static void drawX(int number) {
             for(int row = 1; row <= number; row++) {
                 for(int col = 1; col <= number; col++) {
