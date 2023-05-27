@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// for experimentation: what if i used enums or something to make a more structured code for the switch cases? then based on that enum, every case in switch statement would be referring to some kind of template in C#
+// for experimentation: what if i used enums/structs or something to make a more structured code for the switch cases? then based on that enum, every case in switch statement would be referring to some kind of template in C#
 // Note: actual namespace depends on the project name.
 namespace ADET_activities {  
     public class Program {
@@ -18,7 +18,7 @@ namespace ADET_activities {
 
             do {
                 Console.WriteLine("Shape Drawing");
-                Console.WriteLine("Choose a number between 1 and 13 (inclusive):");
+                Console.WriteLine("Choose a number between 1 and 12 (inclusive):");
                 Console.WriteLine("1 - Parallelogram");
                 Console.WriteLine("2 - Triangle");
                 Console.WriteLine("3 - Reverse Triangle");
@@ -31,7 +31,7 @@ namespace ADET_activities {
                 Console.WriteLine("10 - Arrow Down");
                 Console.WriteLine("11 - X");
                 Console.WriteLine("12 - Bow Tie");
-                Console.WriteLine("13 - EXIT PROGRAM");
+                Console.WriteLine("13 - << EXIT PROGRAM >>");
 
                 choice = Convert.ToInt32(Console.ReadLine());
 
@@ -198,9 +198,7 @@ namespace ADET_activities {
                     default:
                         Console.WriteLine("Invalid input. Please try again.");
                         break;
-
                 }
-
             } while(choice >= 1 && choice <= 12);
         }
     }
