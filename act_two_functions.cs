@@ -193,9 +193,13 @@
             }
         }
 
+        public static bool isOdd(int number) {
+            return number % 2 != 0;
+        }
+
         public static void drawArrowUp(int number) {
             int space = number / 2;
-            int baseWidth = number / 2;
+            int baseLength = number / 2;
  
             for(int r = 1; r <= (number / 2) + 1; r++) {
                 for(int sp = 1; sp <= space; sp++) {
@@ -214,16 +218,19 @@
                 Console.WriteLine();
             }
 
-            for(int printBase = 1; printBase <= baseWidth; printBase++) {
-                for(int baseSpace = 1; baseSpace <= baseWidth - 1; baseSpace++) {
+            int baseWidth = isOdd(number / 2) ? (number / 2) : (number / 2 + 1);
+            int baseTotalSpace = number - baseWidth;
+
+            for(int printBase = 1; printBase <= baseLength; printBase++) {
+                for(int baseSpace = 1; baseSpace <= baseTotalSpace / 2; baseSpace++) {
                     Console.Write("_");
                 }
 
-                for(int baseAsterisk = 1; baseAsterisk <= 3; baseAsterisk++) {
+                for(int baseAsterisk = 1; baseAsterisk <= baseWidth; baseAsterisk++) {
                     Console.Write("*");
                 }
 
-                for(int baseSpace = 1; baseSpace <= baseWidth - 1; baseSpace++) {
+                for(int baseSpace = 1; baseSpace <= baseTotalSpace / 2; baseSpace++) {
                     Console.Write("_");
                 }
 
